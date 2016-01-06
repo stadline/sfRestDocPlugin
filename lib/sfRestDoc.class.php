@@ -5,6 +5,7 @@ class sfRestDoc {
     public static function getRessources($section = null) {
 
     	$paths = sfConfig::get("app_rest_doc_dir");
+
     	if ($section !== null)
     	{
     		if (!array_key_exists($section, $paths))

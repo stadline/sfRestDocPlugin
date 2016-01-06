@@ -18,8 +18,10 @@
         <tr class="<?php echo $j++%2?"odd":"even"?>">
             <td class="rest-doc-service"><a href="<?php echo url_for("rest_docs_plugin_show", $service->getRawValue())?>"><?php echo $service->getTitle()?></a></td>
             <td class="rest-doc-description"><?php echo $service->getDescription() ?></td>
-            <?php if ($service->getAvailable()):?>
-                <td class="rest-doc-available"><strong><?php echo __('ok')?></strong></td>
+            <?php if ($service->getDeprecated()):?>
+                <td class="rest-doc-deprecated"><strong><?php echo __('deprecated')?></strong></td>
+            <?php elseif ($service->getAvailable()):?>
+                    <td class="rest-doc-available"><strong><?php echo __('ok')?></strong></td>
             <?php else: ?>
                 <td class="rest-doc-available"><small><?php echo __('brouillon')?></small></td>
             <?php endif; ?>

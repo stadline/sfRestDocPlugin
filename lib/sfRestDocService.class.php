@@ -121,6 +121,10 @@ class sfRestDocService {
 		return ((string)$this -> xml -> AVAILABLE == "true") ? true : false;
 	}
 
+	public function getDeprecated() {
+		return ((string)$this -> xml -> DEPRECATED == "true") ? true : false;
+	}
+
 	public function hasParameter() {
 		return (is_array($this -> params)) ? true : false;
 	}

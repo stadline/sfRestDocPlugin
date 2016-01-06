@@ -12,6 +12,7 @@
 				<xs:element name="SECURITY" type="xs:boolean" />
 				<xs:element name="AVAILABLE" type="xs:boolean" />
 				<xs:element name="RESPONSE_FORMAT" type="xs:string" />
+				<xs:element name="DEPRECATED" minOccurs="0" type="xs:boolean" />
 				<xs:element name="DOCUMENTATION" minOccurs="0" type="xs:string" />
 				<xs:element name="INFOS" minOccurs="0">
 					<xs:complexType>
